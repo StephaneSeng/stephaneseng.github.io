@@ -23,7 +23,9 @@ layout: default
         </h3>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
-          <img class="post-image" src="{{ post.image }}" />
+          <a href="{{ post.url | relative_url }}">
+            <img class="post-image" src="{{ post.image }}" />
+          </a>
         {%- endif -%}
       </li>
       {%- endfor -%}
